@@ -9,17 +9,21 @@ An optional section would be for R-Core signatories where changes to R are propo
 <!-- 
 Who are the people responsible for actually delivering the project if the proposal gets accepted and are already signed up and rearing to go?
 -->
-- Eric Scott
-- Kristina Riemer
-- Laura Meredith
+- Kristina Riemer, author/maintainer, Director of Communications and Cybertechnologies Data Science team at University of Arizona
+- Eric Scott, contributor, Scientific Programmer and Educator for Communications and Cybertechnologies Data Science team at University of Arizona
 
 ## Contributors
 <!-- 
 Who are the people who have actively helped with this proposal but won't necessarily be on the core project team later?
 -->
 
+- Laura Meredith developed the original idea for the `volcalc` package along with Kristina Riemer and is supportive of continued development by our team.
+- Scott Marshall Ledford has been the main user of early versions of `volcalc` and will continue to provide feedback on the package API and documentation.
+
+
 ## Consulted
 <!-- 
 Who has been given the opportunity to provide feedback on the proposal? This should include any R Consortium & ISC members who the proposal has been discussed with.
 -->
 
+Tamás Stirling, maintainer of the `webchem` package (part of rOpenSci), was consulted and confirmed that `volcalc` is not replicating the efforts of any similar R packages that we are aware of. 
