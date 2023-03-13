@@ -8,10 +8,13 @@ An idea of what is required to make the project actually happen
 Who needs to be involved, what's the proposed structure, what will it take to get their involvement?
 -->
 
+The required people include those with experience creating R packages (Kristina Riemer and Eric Scott), experience with analysis of chemical structure data (Eric Scott and Laura Meredith), and experience publishing R packages to CRAN (Eric Scott).
+
 ## Processes
 <!-- 
 What processes need to be put in place e.g. codes of conduct, regular ISC meetings, handover to the community at large?
 -->
+
 
 ## Tools & Tech
 <!--
@@ -28,7 +31,19 @@ Are there tools or tech that don't exist that will be produced to facilitate the
 
 -->
 
+We would like to request funding for the salaries of personnel working on this project.
+
+- Kristina Riemer: __ hours, __/hr, altogether $___
+- Eric Scott: __ hours, __/hr, altogether $___
+
+Funding timeline:
+
+- After milestone__, date, $____
+- After technical delivery, date, $____
+
 ## Summary
 <!--
 A summary of the requirements that contextualises the costs
 -->
+
+These costs represent a one-time investment to pay for personnel to work on the project.
