@@ -7,16 +7,26 @@ Projects should have a definition of done that is measurable, and a thorough und
 <!-- 
 What does success look like? 
 -->
+We would consider this project successful if the `volcalc` package when a version has been released on GitHub, code has been archived on Zenodo, and th package has been successfully submitted to CRAN.
 
 ## Measuring success
 <!-- 
 How will we know when success is achieved, what markers can we use along the way 
 -->
 
+The following can be used to measure success:
+
+- Is it easy to install the package and use it? (yes/no)
+- 
+
 ## Future work
 <!-- 
 How could this be extended / developed in the future by yourself and/or the community in general?
 -->
+
+- visualizations?
+- present at a conferences or teaching people to use it
+- what publications could this enable
 
 ## Key risks
 <!-- 
@@ -28,3 +38,6 @@ What sort of things could come up that can delay or break the project?
  - [ ] Costs
 
 -->
+
+- The project could be delayed if contributors ended up able to devote less time to the project than planned
+- The SIMPOL algorithm might not be applicable to all compounds.  We may need to add some checks in the case that values returned by `volcalc` may not make sense for certain compounds. <!--????-->
