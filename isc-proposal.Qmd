@@ -1,0 +1,18 @@
+---
+title: ""
+author: ""
+date: "`r Sys.Date()`"
+format: html
+---
+
+{{< include proposal/signatories.Rmd >}}
+
+{{< include proposal/problemdefinition.Rmd >}}
+
+{{< include proposal/proposal.Rmd >}}
+
+{{< include proposal/timeline.Rmd >}}
+
+{{< include proposal/requirements.Rmd >}}
+
+{{< include proposal/success.Rmd >}}
