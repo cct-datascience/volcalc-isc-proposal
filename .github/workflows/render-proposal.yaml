@@ -11,20 +11,15 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v3
-      - name: Run rendering script
-        run: Rscript ghgenerate.R
-      - name: Commit files
-        run: |
-          git config --local core.autocrlf false
-          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
-          git config --local user.name "${{ github.actor }}"
-          git add . && git add --renormalize .
-          git pull origin ${{ github.head_ref }} --autostash --rebase -X ours
-          git commit --allow-empty -am "AUTO-GH ACTION: ${{ github.workflow }}"
-          NO_PAGER=1 git --no-pager diff HEAD^
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
         with:
-          branch: ${{ github.head_ref }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tinytex: true
+          
+      - name: Render Proposal
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          to: html
+          path: "isc-proposal.Qmd"
