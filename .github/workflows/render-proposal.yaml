@@ -7,9 +7,6 @@ name: render-proposal
 jobs:
   render-proposal:
     runs-on: ubuntu-latest
-    container: rocker/r-rmd
-    env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
