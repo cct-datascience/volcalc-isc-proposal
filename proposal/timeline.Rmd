@@ -1,5 +1,10 @@
 # Project plan
 
+## Dates
+
+- Project start date: June 1, 2023
+- Project end date: January 31, 2024
+
 ## Start-up phase
 <!--
 Covering the planning phase, this section should provide a relatively detailed plan of how work will start on the project. This section is important because projects need to get up and running quickly.
@@ -10,6 +15,16 @@ Covering the planning phase, this section should provide a relatively detailed p
  - [ ] Reporting framework
 -->
 
+**I just realized there's nothing about getting package CRAN-ready on here**
+
+#### Milestone 1: July 1, 2023
+
+- Implement CI with GitHub actions
+- Check code coverage with `codecov` package
+- Use GitHub Issues or Discussions to brainstorm eventual API (i.e. function names, argument names, how many exported functions, etc.)
+
+Estimated work: 10 hours
+
 
 ## Technical delivery
 <!--
@@ -17,6 +32,33 @@ Covering the actual delivery of the project this section should provide at least
 
 Including target dates is really important as you need to be committed and the ISC need to have a means of tracking delivery
 -->
+
+#### Milestone 2: September 1, 2023
+
+- Re-factor `calc_vol()` code to split KEGG download and SIMPOL calculation functionality
+- Deprecate arguments and functions appropriately as necessary
+- Update documentation to reflect new function usage
+
+Estimated work: 40 hours
+
+
+#### Milestone 3: November 1, 2023
+
+- Create a vignette demonstrating both KEGG usage and more general usage (i.e. providing a path to a .mol file) for volatility estimation
+- Improve package documentation by adding citations, details, and additional examples where appropriate
+- Create a `pkgdown` website for `volcalc`
+- Create a CITATION.cff file, make a GitHub release, and archive code on Zenodo
+
+Estimated work: 40 hours
+
+
+#### Milestone 4: January 31, 2024
+
+- Add functionality to supply other chemical representations besides molfiles as input
+- Add to vignette(s) examples of integrating `volcalc` with `webchem` to estimate volatility for an arbitrary set of compounds (i.e. not from KEGG), and `volcalc` with Biocyc
+
+Estimated work: 40 hours
+
 
 ## Other aspects
 <!--
@@ -28,3 +70,14 @@ Covering non-technical activities like on-going publicity, paper preparation, di
  - [ ] UseR!
  - [ ] ISC meetings
 -->
+
+Dissemination plan: <!-- This section is done! -->
+
+- After the initial re-factor (milestone 2 above), we plan to share the package with `webchem` contributors via our rOpenSci Slack channel for feedback & suggestions.  We will encourage them to share the project with their networks of collaborators as well.
+- At the project conclusion we will:
+  - prepare blog post for https://datascience.cct.arizona.edu/
+  - prepare a twitter annoucement to share from [@cct_datascience](https://twitter.com/cct_datascience)
+  - prepare a short demonstration video to be published to our [YouTube channel](https://www.youtube.com/@cctdatascience2556) that can be shared on the README of our repository
+  - We will also work with our collaborator Laura Meredith to identify potential domain-specific venues to promote the use of `volcalc`
+
+Estimated work: 20 hours
