@@ -2,7 +2,7 @@ on:
   push:
     branches: [main, master]
 
-name: render-proposal
+name: publish-proposal
 
 jobs:
   render-proposal:
@@ -15,8 +15,10 @@ jobs:
         with:
           tinytex: true
           
-      - name: Render Proposal
-        uses: quarto-dev/quarto-actions/render@v2
+      - name: Publish to GitHub Pages (and render)
+        uses: quarto-dev/quarto-actions/publish@v2
         with:
-          to: html
+          target: gh-pages
+          to: pdf
           path: "isc-proposal.Qmd"
+          

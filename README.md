@@ -1,7 +1,9 @@
 # isc-proposal
-[![Build Status](https://travis-ci.org/stephlocke/isc-proposal.svg?branch=master)](https://travis-ci.org/stephlocke/isc-proposal)
+[![build-status](https://github.com/cct-datascience/volcalc-isc-proposal/actions/workflows/render-proposal.yaml/badge.svg)](https://github.com/cct-datascience/volcalc-isc-proposal/actions/workflows/render-proposal.yaml)
 
 This repository is a boilerplate repository that helps you prepare your proposal for the [R Consortium](https://www.r-consortium.org).
+
+Rendered proposal: https://cct-datascience.github.io/volcalc-isc-proposal/
 
 ## Background 
 Set up in 2015, the R Consortium is an organisation set up to help support the R Foundation, the R Community, and R users.
