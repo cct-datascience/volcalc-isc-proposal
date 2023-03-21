@@ -7,7 +7,7 @@ Projects should have a definition of done that is measurable, and a thorough und
 <!-- 
 What does success look like? 
 -->
-We would consider this project successful if the `volcalc` package when a version has been released on GitHub, code has been archived on Zenodo, and th package has been successfully submitted to CRAN.
+We would consider this project successful when a new version of `volcalc` with the ability to calculate volatility given an arbitrary molfile has been released on GitHub, the code has been archived on Zenodo, and the package has been successfully submitted to CRAN.
 
 ## Measuring success
 <!-- 
@@ -16,8 +16,15 @@ How will we know when success is achieved, what markers can we use along the way
 
 The following can be used to measure success:
 
-- Is it easy to install the package and use it? (yes/no)
-- 
+- Can the package be installed from GitHub? (yes/no)
+- Can the package be installed from r-universe? (yes/no)
+- Test coverage (at least 90%)
+- Correctness tests for volatiltiy predictions including comparisons with measured values (± some tolerance) (yes/no)
+- Is the package passing R CMD check on linux, macOS, and windows using CI? (yes/no)
+- Has the package been tested by users other than the developers? (yes/no)
+- Does the package have a vignette that is easy to follow? (yes/no)
+- Is code archived on Zenodo and a DOI associated with the package citation? (yes/no)
+- The number of chemical representation types that can be used as input (molfile for success; inchikey, inchi, SMILES, and possibly more for reach goal)
 
 ## Future work
 <!-- 
@@ -40,4 +47,6 @@ What sort of things could come up that can delay or break the project?
 -->
 
 - The project could be delayed if contributors ended up able to devote less time to the project than planned
-- The SIMPOL algorithm might not be applicable to all compounds.  We may need to add some checks in the case that values returned by `volcalc` may not make sense for certain compounds. <!--????-->
+- The SIMPOL algorithm might not be applicable to *all* compounds, since it was designed to work with volatile organic compounds.  In that case, we may need to add a warning to the user that values returned by `volcalc` may not make sense for certain compounds.
+- `volcalc` has `OpenBabel` as a system dependency (indirectly), which could potentially lead to delays in getting the package to build using GitHub actions.
+
