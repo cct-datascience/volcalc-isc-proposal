@@ -55,7 +55,7 @@ Estimated work: 40 hours
 #### Milestone 4: January 31, 2024
 
 - Add functionality to supply other chemical representations besides molfiles as input
-- Add to vignette(s) examples of integrating `volcalc` with `webchem` to estimate volatility for an arbitrary set of compounds (i.e. not from KEGG), and `volcalc` with Biocyc
+- Add to vignette(s) examples of integrating `volcalc` with data sources such as the `webchem` package to estimate volatility for an arbitrary set of compounds (i.e. not from KEGG)
 
 Estimated work: 40 hours
 
@@ -76,8 +76,8 @@ Dissemination plan: <!-- This section is done! -->
 - After the initial re-factor (milestone 2 above), we plan to share the package with `webchem` contributors via our rOpenSci Slack channel for feedback & suggestions.  We will encourage them to share the project with their networks of collaborators as well.
 - At the project conclusion we will:
   - prepare blog post for https://datascience.cct.arizona.edu/
-  - prepare a twitter annoucement to share from [@cct_datascience](https://twitter.com/cct_datascience)
-  - prepare a short demonstration video to be published to our [YouTube channel](https://www.youtube.com/@cctdatascience2556) that can be shared on the README of our repository
-  - We will also work with our collaborator Laura Meredith to identify potential domain-specific venues to promote the use of `volcalc`
+  - prepare a twitter announcement to share from [@cct_datascience](https://twitter.com/cct_datascience)
+  - prepare a short demonstration video to be published to our [YouTube channel](https://www.youtube.com/@cctdatascience2556) that can be shared on the README of our repository and through social media
+  - We will also work with our collaborator Laura Meredith to identify potential domain-specific venues to promote the use of `volcalc` such as scholarly societies, email lists, and social media accounts
 
 Estimated work: 20 hours
