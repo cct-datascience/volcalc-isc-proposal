@@ -41,5 +41,7 @@ bibliography: references.bib
 
 {{< include proposal/success.Rmd >}}
 
+## References
+
 ::: refs
 :::
