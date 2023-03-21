@@ -2853,7 +2853,7 @@ Projects should have a definition of done that is measurable, and a thorough und
 <!-- 
 What does success look like? 
 -->
-<p>We would consider this project successful if the <code>volcalc</code> package when a version has been released on GitHub, code has been archived on Zenodo, and th package has been successfully submitted to CRAN.</p>
+<p>We would consider this project successful when a new version of <code>volcalc</code> with the ability to calculate volatility given an arbitrary molfile has been released on GitHub, the code has been archived on Zenodo, and the package has been successfully submitted to CRAN.</p>
 </section>
 <section id="measuring-success" class="level2">
 <h2 class="anchored" data-anchor-id="measuring-success">Measuring success</h2>
@@ -2862,8 +2862,15 @@ How will we know when success is achieved, what markers can we use along the way
 -->
 <p>The following can be used to measure success:</p>
 <ul>
-<li>Is it easy to install the package and use it? (yes/no)</li>
-<li></li>
+<li>Can the package be installed from GitHub? (yes/no)</li>
+<li>Can the package be installed from r-universe? (yes/no)</li>
+<li>Test coverage (at least 90%)</li>
+<li>Correctness tests for volatiltiy predictions including comparisons with measured values (± some tolerance) (yes/no)</li>
+<li>Is the package passing R CMD check on linux, macOS, and windows using CI? (yes/no)</li>
+<li>Has the package been tested by users other than the developers? (yes/no)</li>
+<li>Does the package have a vignette that is easy to follow? (yes/no)</li>
+<li>Is code archived on Zenodo and a DOI associated with the package citation? (yes/no)</li>
+<li>The number of chemical representation types that can be used as input (molfile for success; inchikey, inchi, SMILES, and possibly more for reach goal)</li>
 </ul>
 </section>
 <section id="future-work" class="level2">
@@ -2890,7 +2897,8 @@ What sort of things could come up that can delay or break the project?
 -->
 <ul>
 <li>The project could be delayed if contributors ended up able to devote less time to the project than planned</li>
-<li>The SIMPOL algorithm might not be applicable to all compounds. We may need to add some checks in the case that values returned by <code>volcalc</code> may not make sense for certain compounds. <!--????--></li>
+<li>The SIMPOL algorithm might not be applicable to <em>all</em> compounds, since it was designed to work with volatile organic compounds. In that case, we may need to add a warning to the user that values returned by <code>volcalc</code> may not make sense for certain compounds.</li>
+<li><code>volcalc</code> has <code>OpenBabel</code> as a system dependency (indirectly), which could potentially lead to delays in getting the package to build using GitHub actions.</li>
 </ul>
 </section>
 <section id="references" class="level2">
