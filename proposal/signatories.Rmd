@@ -17,8 +17,8 @@ Who are the people responsible for actually delivering the project if the propos
 Who are the people who have actively helped with this proposal but won't necessarily be on the core project team later?
 -->
 
-- Laura Meredith developed the original idea for the `volcalc` package along with Kristina Riemer and is supportive of continued development by our team.
-- Scott Marshall Ledford has been the main user of early versions of `volcalc` and will continue to provide feedback on the package API and documentation.
+- Assistant Professor Laura Meredith developed the original idea for the `volcalc` package along with Kristina Riemer and is supportive of continued development by our team.
+- PhD student S. Marshall Ledford has been the main user of early versions of `volcalc` and will continue to provide feedback on the package API and documentation.
 
 
 ## Consulted
