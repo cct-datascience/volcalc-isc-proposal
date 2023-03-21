@@ -14,8 +14,6 @@ Additionally, we plant to improve package infrastructure and documentation (i.e.
 This will put a powerful and unique tool for calculating predicted volatility of essentially any compound in the hands of researchers in a wide variety of fields.
 
 ## Detail
-
-```{=html}
 <!--
 Go into more detail about the specifics of the project and it delivers against the problem.
 
@@ -25,7 +23,7 @@ Depending on project type the detail section should include:
  - [ ] Architecture
  - [ ] Assumptions
 -->
-```
+
 The current version of `volcalc` was created in 2022 as part of a [data science incubator](https://datascience.cct.arizona.edu/cct-data-science-incubator) project in collaboration between Dr. Kristina Riemer and Dr. Laura Meredith at University of Arizona.
 `volcalc` is the first project, to our knowledge, to implement the SIMPOL method for predicting chemical vapor pressures and enthalpies of vaporization [@pankowSIMPOLSimpleGroup2008] in an R package.
 This current version of the `volcalc` package has been successfully used to calculate volatility estimates for *all* 16,000+ compounds in the Kyoto Encyclopedia of Genes and Genomes (KEGG) database.
