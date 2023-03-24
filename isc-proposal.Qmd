@@ -22,8 +22,8 @@ affiliations:
     
 date: today
 date-format: iso
-format: 
-  pdf: default
+format:
+  hikmah-pdf: default
   html:
     embed-resources: true
 bibliography: references.bib
@@ -40,8 +40,6 @@ bibliography: references.bib
 {{< include proposal/requirements.Rmd >}}
 
 {{< include proposal/success.Rmd >}}
-
-## References
 
 ::: refs
 :::
