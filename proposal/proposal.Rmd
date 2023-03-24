@@ -1,4 +1,4 @@
-# The Proposal
+# The proposal
 <!--
 This is where the proposal should be outlined. 
 -->
@@ -8,10 +8,11 @@ This is where the proposal should be outlined.
 At a high-level address what your proposal is and how it will address the problem identified. Highlight any benefits to the R Community that follow from solving the problem. This should be your most compelling section.
 -->
 
-The current version of the main function in `volcalc`, `calc_vol()`, only works with compounds in the KEGG database.
+
+Using the support from this proposal, we will take our existing tool for calculating volatility of compounds and expand its usage to makes predictions for essentially any compound, and enable researchers in a wide variety of fields to be able to use it with ease. 
+The current version of `volcalc` can estimate volatility only for compounds in one chemical database, called KEGG.
 However, by refactoring existing code, we can make the volatility prediction functionality available to essentially any compound that has a known structure.
-Additionally, we plant to improve package infrastructure and documentation (i.e. tests, CI, vignettes, etc.), build the package on r-universe, and submit the package to CRAN in order to simplify installation.
-This will put a powerful and unique tool for calculating predicted volatility of essentially any compound in the hands of researchers in a wide variety of fields.
+Additionally, we plan to improve package infrastructure and documentation (i.e. tests, CI, vignettes, etc.), build the package on r-universe, and submit the package to CRAN in order to simplify installation.
 
 ## Detail
 <!--
@@ -26,11 +27,16 @@ Depending on project type the detail section should include:
 
 The current version of `volcalc` was created in 2022 as part of a [data science incubator](https://datascience.cct.arizona.edu/cct-data-science-incubator) project in collaboration between Dr. Kristina Riemer and Dr. Laura Meredith at University of Arizona.
 `volcalc` is the first project, to our knowledge, to implement the SIMPOL method for predicting chemical vapor pressures and enthalpies of vaporization [@pankowSIMPOLSimpleGroup2008] in an R package.
-This current version of the `volcalc` package has been successfully used to calculate volatility estimates for *all* 16,000+ compounds in the Kyoto Encyclopedia of Genes and Genomes (KEGG) database.
-However, in its current form, it is limited to only working with chemical compounds in KEGG.
+This current version of the `volcalc` package has been successfully used to calculate volatility estimates for *all* 16,000+ compounds in the Kyoto Encyclopedia of Genes and Genomes (KEGG) database (in prep ms ref). validated using hand-collected data (refs)
+
+L. K. Meredith and M. M. Tfaily. (2022) Capturing the microbial volatilome: an oft overlooked ‘ome’. Trends in Microbiology, doi: 10.1016/j.tim.2021.12.004. Document online
+
+Honeker, L. K., K. R. Graves, M. M. Tfaily, J. E. Krechmer, L. K. Meredith. (2021) The volatilome: a vital piece of the complete soil metabolome. Frontiers in Environmental Science 9:113. Document online
+
+Because `volcalc` is currently limited to only working with chemical compounds from KEGG, we will refactor it to take molfiles as inputs directly.
 The main function in `volcalc`, `calc_vol()`, currently downloads chemical information as molfiles from the KEGG API as a starting point.
-It then reads that .mol file in and parses it to find functional groups.
-It then applies an algorithm (published in @pankowSIMPOLSimpleGroup2008) to predict vapor pressure, and outputs to the user a relative measure of volatility.
+It reads in that .mol file and parses it to find functional groups.
+It finally applies an algorithm (published in @pankowSIMPOLSimpleGroup2008) to predict vapor pressure, and outputs to the user a relative measure of volatility.
 
 Molfile is an open format and various tools exist to translate other standard representations of chemical structure such as SMILES [@weininger1988smiles] and InChI [@heller2013] to molfiles (e.g. using the [`OpenBabel`](http://openbabel.org/wiki/Main_Page) command line utility or in R with [`ChemmineOB`](https://github.com/girke-lab/ChemmineOB)).
 Since `ChemmineOB` is already a dependency of `volcalc`, we can additionally extend `volcalc` to allow other representations of chemical structures as inputs.
@@ -47,10 +53,10 @@ Our goals for the proposed project fall into two main categories: 1) to make `vo
 
 For the first goal, we will focus on decoupling the data access and volatility estimation functionality of existing code in the `volcalc` package.
 This code is already written and the main work here is in API design and re-factoring.
-The minimum viable product here is a function that can calculate volatility when provided a path to a .mol file and a package vignette demonstrating how to couple this with chemical data sources such as the `webchem` package.
+The **first minimum viable product** is a function that can calculate volatility when provided a path to a .mol file and a package vignette demonstrating how to couple this with chemical data sources such as the `webchem` package.
 
 The second goal will involve improving test coverage (although current coverage is high at 96.88% as reported by `covr::package_coverage()`), establishing continuous integration with GitHub actions, improving documentation, and satisfying R CMD check.
-The minimum viable product here is a package that has gone through the steps suggested by `usethis::use_release_issue()` and is ready to submit to CRAN.
+The **second minimum viable product** is a package that has gone through the steps suggested by `usethis::use_release_issue()` and is ready to submit to CRAN.
 
 A reach goal is to allow users to input other chemical structure representations besides molfiles.
 The `ChemmineOB` package can translate a variety of chemical structure representations to molfiles and is already an indirect dependency of `volcalc` through its dependency on `ChemmineR`.
