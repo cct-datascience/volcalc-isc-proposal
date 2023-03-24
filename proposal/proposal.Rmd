@@ -27,11 +27,7 @@ Depending on project type the detail section should include:
 
 The current version of `volcalc` was created in 2022 as part of a [data science incubator](https://datascience.cct.arizona.edu/cct-data-science-incubator) project in collaboration between Dr. Kristina Riemer and Dr. Laura Meredith at University of Arizona.
 `volcalc` is the first project, to our knowledge, to implement the SIMPOL method for predicting chemical vapor pressures and enthalpies of vaporization [@pankowSIMPOLSimpleGroup2008] in an R package.
-This current version of the `volcalc` package has been successfully used to calculate volatility estimates for *all* 16,000+ compounds in the Kyoto Encyclopedia of Genes and Genomes (KEGG) database (in prep ms ref). validated using hand-collected data (refs)
-
-L. K. Meredith and M. M. Tfaily. (2022) Capturing the microbial volatilome: an oft overlooked ‘ome’. Trends in Microbiology, doi: 10.1016/j.tim.2021.12.004. Document online
-
-Honeker, L. K., K. R. Graves, M. M. Tfaily, J. E. Krechmer, L. K. Meredith. (2021) The volatilome: a vital piece of the complete soil metabolome. Frontiers in Environmental Science 9:113. Document online
+This current version of the `volcalc` package has been successfully used to calculate volatility estimates for *all* 16,000+ compounds in the Kyoto Encyclopedia of Genes and Genomes (KEGG) database (in prep ms ref). validated using hand-collected data [@meredith2022; @honeker2021]
 
 Because `volcalc` is currently limited to only working with chemical compounds from KEGG, we will refactor it to take molfiles as inputs directly.
 The main function in `volcalc`, `calc_vol()`, currently downloads chemical information as molfiles from the KEGG API as a starting point.
