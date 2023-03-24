@@ -16,7 +16,7 @@ Volatile organic compounds are important components of many biological and chemi
 Volatile organic compounds are chemicals that readily evaporate under ambient conditions, and are important in a number of fields and contexts including plant defense against herbivores, as routes of microbial communication, and as important indoor pollutants, to name a few.
 Yet measures of volatility are time consuming to calculate experimentally and not available for the vast majority of chemical compounds in chemical information databases. However, methods exist for predicting measures of volatility from chemical structure [@pankowSIMPOLSimpleGroup2008] that can be used to estimate compound volatility.
 
-The `volcalc` package aims to automate the following steps for a given compound to estimate its volatility: 1) downloading data on chemical structure, 2) parsing those data to discover chemical functional groups, 3) applying the SIMPOL algorithm to predict volatility from functional groups and molecular weight.
+The `volcalc` package aims to automate the following steps for a given compound to estimate its volatility: 1) downloading data on chemical structure, 2) parsing those data to discover chemical functional groups, 3) applying the SIMPOL algorithm to predict volatility from functional groups and molecular weight, and assign compounds a volatility category given a reference environment
 The current draft version of `volcalc` does all this, but is limited to working with compounds present in the Kyoto Encyclopedia of Genes and Genomes (KEGG) database.
 This proposal focuses on expanding the scope of `volcalc` and preparing it for a larger and more diverse user base so anyone interested in volatile organic compounds can integrate it into their workflow.
 

@@ -54,6 +54,6 @@ The **first minimum viable product** is a function that can calculate volatility
 The second goal will involve improving test coverage (although current coverage is high at 96.88% as reported by `covr::package_coverage()`), establishing continuous integration with GitHub actions, improving documentation, and satisfying R CMD check.
 The **second minimum viable product** is a package that has gone through the steps suggested by `usethis::use_release_issue()` and is ready to submit to CRAN.
 
-A reach goal is to allow users to input other chemical structure representations besides molfiles.
-The `ChemmineOB` package can translate a variety of chemical structure representations to molfiles and is already an indirect dependency of `volcalc` through its dependency on `ChemmineR`.
+A reach goal is to allow users to input other representations of chemical structure besides molfiles.
+The `ChemmineOB` package can translate a variety of representations of chemical structure to molfiles and is already an indirect dependency of `volcalc` through its dependency on `ChemmineR`.
 Adding an argument to our `volcalc` function to specify the input format, and passing it to `ChemmineOB`'s translation function would be a way to expand the usability of `volcalc` even further.
