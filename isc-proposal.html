@@ -2711,7 +2711,7 @@ Depending on project type the detail section should include:
 <h2 class="anchored" data-anchor-id="dates">Dates</h2>
 <ul>
 <li>Project start date: June 1, 2023</li>
-<li>Project end date: January 31, 2024</li>
+<li>Project end date: May 31, 2024</li>
 </ul>
 </section>
 <section id="start-up-phase" class="level2">
@@ -2724,14 +2724,15 @@ Covering the planning phase, this section should provide a relatively detailed p
  - [ ] Licence decisions
  - [ ] Reporting framework
 -->
-<section id="milestone-1-july-1-2023" class="level4">
-<h4 class="anchored" data-anchor-id="milestone-1-july-1-2023">Milestone 1: July 1, 2023</h4>
+<p><strong>I just realized there’s nothing about getting package CRAN-ready on here (goes in milestone 3?)</strong></p>
+<section id="milestone-1-august-1-2023" class="level4">
+<h4 class="anchored" data-anchor-id="milestone-1-august-1-2023">Milestone 1: August 1, 2023</h4>
 <ul>
 <li>Implement CI with GitHub actions</li>
 <li>Check code coverage with <code>codecov</code> package</li>
 <li>Use GitHub Issues or Discussions to brainstorm eventual API (i.e. function names, argument names, how many exported functions, etc.)</li>
 </ul>
-<p>Estimated work: 10 hours</p>
+<p>Estimated work: 20 hours</p>
 </section>
 </section>
 <section id="technical-delivery" class="level2">
@@ -2741,33 +2742,32 @@ Covering the actual delivery of the project this section should provide at least
 
 Including target dates is really important as you need to be committed and the ISC need to have a means of tracking delivery
 -->
-<section id="milestone-2-september-1-2023" class="level4">
-<h4 class="anchored" data-anchor-id="milestone-2-september-1-2023">Milestone 2: September 1, 2023</h4>
+<section id="milestone-2-october-1-2023" class="level4">
+<h4 class="anchored" data-anchor-id="milestone-2-october-1-2023">Milestone 2: October 1, 2023</h4>
 <ul>
 <li>Re-factor <code>calc_vol()</code> code to split KEGG download and SIMPOL calculation functionality</li>
 <li>Deprecate arguments and functions appropriately as necessary</li>
 <li>Update documentation to reflect new function usage</li>
 </ul>
-<p>Estimated work: 40 hours</p>
+<p>Estimated work: 60 hours</p>
 </section>
-<section id="milestone-3-november-1-2023" class="level4">
-<h4 class="anchored" data-anchor-id="milestone-3-november-1-2023">Milestone 3: November 1, 2023</h4>
+<section id="milestone-3-february-1-2024" class="level4">
+<h4 class="anchored" data-anchor-id="milestone-3-february-1-2024">Milestone 3: February 1, 2024</h4>
 <ul>
 <li>Create a vignette demonstrating both KEGG usage and more general usage (i.e. providing a path to a .mol file) for volatility estimation</li>
 <li>Improve package documentation by adding citations, details, and additional examples where appropriate</li>
 <li>Create a <code>pkgdown</code> website for <code>volcalc</code></li>
 <li>Create a CITATION.cff file, make a GitHub release, and archive code on Zenodo</li>
-<li>Go through CRAN release checklist created by <code>usethis::use_release_issue()</code></li>
 </ul>
-<p>Estimated work: 40 hours</p>
+<p>Estimated work: 60 hours</p>
 </section>
-<section id="milestone-4-january-31-2024" class="level4">
-<h4 class="anchored" data-anchor-id="milestone-4-january-31-2024">Milestone 4: January 31, 2024</h4>
+<section id="milestone-4-may-1-2024" class="level4">
+<h4 class="anchored" data-anchor-id="milestone-4-may-1-2024">Milestone 4: May 1, 2024</h4>
 <ul>
 <li>Add functionality to supply other chemical representations besides molfiles as input</li>
 <li>Add to vignette(s) examples of integrating <code>volcalc</code> with data sources such as the <code>webchem</code> package to estimate volatility for an arbitrary set of compounds (i.e. not from KEGG)</li>
 </ul>
-<p>Estimated work: 40 hours</p>
+<p>Estimated work: 80 hours</p>
 </section>
 </section>
 <section id="other-aspects" class="level2">
@@ -2781,20 +2781,18 @@ Covering non-technical activities like on-going publicity, paper preparation, di
  - [ ] UseR!
  - [ ] ISC meetings
 -->
-<section id="dissemination-plan" class="level4">
-<h4 class="anchored" data-anchor-id="dissemination-plan">Dissemination Plan</h4>
+<p>Dissemination plan: <!-- This section is done! --></p>
 <ul>
 <li>After the initial re-factor (milestone 2 above), we plan to share the package with <code>webchem</code> contributors via our rOpenSci Slack channel for feedback &amp; suggestions. We will encourage them to share the project with their networks of collaborators as well.</li>
-<li>At the project conclusion we will:
+<li>Near the project conclusion we will:
 <ul>
-<li>prepare blog post for https://datascience.cct.arizona.edu/</li>
-<li>prepare a twitter announcement to share from <a href="https://twitter.com/cct_datascience"><span class="citation" data-cites="cct_datascience">(</span></a><a href="#ref-cct_datascience" role="doc-biblioref"><strong>cct_datascience?</strong></a>)</li>
+<li>prepare a blog post for https://datascience.cct.arizona.edu/</li>
+<li>prepare a Twitter announcement to share from <a href="https://twitter.com/cct_datascience"><span class="citation" data-cites="cct_datascience">(</span></a><a href="#ref-cct_datascience" role="doc-biblioref"><strong>cct_datascience?</strong></a>)</li>
 <li>prepare a short demonstration video to be published to our <a href="https://www.youtube.com/@cctdatascience2556">YouTube channel</a> that can be shared on the README of our repository and through social media</li>
-<li>We will also work with our collaborator Laura Meredith to identify potential domain-specific venues to promote the use of <code>volcalc</code> such as scholarly societies, email lists, and social media accounts</li>
+<li>work with our collaborator Laura Meredith to identify potential domain-specific venues to promote the use of <code>volcalc</code> such as scholarly societies, email lists, and social media accounts</li>
 </ul></li>
 </ul>
 <p>Estimated work: 20 hours</p>
-</section>
 </section>
 </section>
 <section id="requirements" class="level1">
