@@ -31,9 +31,7 @@ The following can be used to measure success:
 How could this be extended / developed in the future by yourself and/or the community in general?
 -->
 
-- visualizations?
-- present at a conferences or teaching people to use it
-- what publications could this enable
+**TODO: replace with text from future directions in manuscript in prep**
 
 ## Key risks
 <!-- 
@@ -46,7 +44,6 @@ What sort of things could come up that can delay or break the project?
 
 -->
 
-- The project could be delayed if contributors ended up able to devote less time to the project than planned
-- The SIMPOL algorithm might not be applicable to *all* compounds, since it was designed to work with volatile organic compounds.  In that case, we may need to add a warning to the user that values returned by `volcalc` may not make sense for certain compounds.
-- `volcalc` has `OpenBabel` as a system dependency (indirectly), which could potentially lead to delays in getting the package to build using GitHub actions.
+- The SIMPOL algorithm might not be applicable to *all* compounds, since it was designed to work with volatile organic compounds.  In that case, we may need to add a warning to the user that values returned by `volcalc` may not make sense for certain compounds based on molecular weight, for example. We will explore edge cases with our collaborators and develop a plan to guide users to correct and accurate interpretation of data returned by `volcalc` functions.
+- `volcalc` has `OpenBabel` as a system dependency (indirectly), which could potentially lead to delays in getting the package to build using GitHub actions. In the event that this is an issue, we will reach out to the rOpenSci community on Slack for help with this.
 
