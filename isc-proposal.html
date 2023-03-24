@@ -2893,11 +2893,7 @@ How will we know when success is achieved, what markers can we use along the way
 <!-- 
 How could this be extended / developed in the future by yourself and/or the community in general?
 -->
-<ul>
-<li>visualizations?</li>
-<li>present at a conferences or teaching people to use it</li>
-<li>what publications could this enable</li>
-</ul>
+<p><strong>TODO: replace with text from future directions in manuscript in prep</strong></p>
 </section>
 <section id="key-risks" class="level2">
 <h2 class="anchored" data-anchor-id="key-risks">Key risks</h2>
@@ -2911,9 +2907,8 @@ What sort of things could come up that can delay or break the project?
 
 -->
 <ul>
-<li>The project could be delayed if contributors ended up able to devote less time to the project than planned</li>
-<li>The SIMPOL algorithm might not be applicable to <em>all</em> compounds, since it was designed to work with volatile organic compounds. In that case, we may need to add a warning to the user that values returned by <code>volcalc</code> may not make sense for certain compounds.</li>
-<li><code>volcalc</code> has <code>OpenBabel</code> as a system dependency (indirectly), which could potentially lead to delays in getting the package to build using GitHub actions.</li>
+<li>The SIMPOL algorithm might not be applicable to <em>all</em> compounds, since it was designed to work with volatile organic compounds. In that case, we may need to add a warning to the user that values returned by <code>volcalc</code> may not make sense for certain compounds based on molecular weight, for example. We will explore edge cases with our collaborators and develop a plan to guide users to correct and accurate interpretation of data returned by <code>volcalc</code> functions.</li>
+<li><code>volcalc</code> has <code>OpenBabel</code> as a system dependency (indirectly), which could potentially lead to delays in getting the package to build using GitHub actions. In the event that this is an issue, we will reach out to the rOpenSci community on Slack for help with this.</li>
 </ul>
 <div class="refs">
 
