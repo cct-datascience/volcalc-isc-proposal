@@ -15,8 +15,6 @@ Covering the planning phase, this section should provide a relatively detailed p
  - [ ] Reporting framework
 -->
 
-**I just realized there's nothing about getting package CRAN-ready on here**
-
 #### Milestone 1: July 1, 2023
 
 - Implement CI with GitHub actions
@@ -48,6 +46,7 @@ Estimated work: 40 hours
 - Improve package documentation by adding citations, details, and additional examples where appropriate
 - Create a `pkgdown` website for `volcalc`
 - Create a CITATION.cff file, make a GitHub release, and archive code on Zenodo
+- Go through CRAN release checklist created by `usethis::use_release_issue()`
 
 Estimated work: 40 hours
 
@@ -71,7 +70,7 @@ Covering non-technical activities like on-going publicity, paper preparation, di
  - [ ] ISC meetings
 -->
 
-Dissemination plan: <!-- This section is done! -->
+#### Dissemination Plan
 
 - After the initial re-factor (milestone 2 above), we plan to share the package with `webchem` contributors via our rOpenSci Slack channel for feedback & suggestions.  We will encourage them to share the project with their networks of collaborators as well.
 - At the project conclusion we will:
