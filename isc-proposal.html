@@ -10,7 +10,7 @@
 <meta name="author" content="Eric R. Scott">
 <meta name="author" content="Laura Meredith">
 <meta name="author" content="S. Marshall Ledford">
-<meta name="dcterms.date" content="2023-03-24">
+<meta name="dcterms.date" content="2023-03-28">
 
 <title>volcalc: Calculate predicted volatility of chemical compounds</title>
 <style>
@@ -2581,7 +2581,7 @@ vertical-align: -.125em;
   </div>
     <div class="quarto-title-meta-contents">
         <p class="affiliation">
-            Communications &amp; Cybertechnologies, University of Arizona
+            Communications &amp; Cyber Technologies, University of Arizona
           </p>
       </div>
       <div class="quarto-title-meta-contents">
@@ -2589,7 +2589,7 @@ vertical-align: -.125em;
   </div>
     <div class="quarto-title-meta-contents">
         <p class="affiliation">
-            Communications &amp; Cybertechnologies, University of Arizona
+            Communications &amp; Cyber Technologies, University of Arizona
           </p>
       </div>
       <div class="quarto-title-meta-contents">
@@ -2616,7 +2616,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2023-03-24</p>
+      <p class="date">2023-03-28</p>
     </div>
   </div>
   
@@ -2639,8 +2639,8 @@ An optional section would be for R-Core signatories where changes to R are propo
 Who are the people responsible for actually delivering the project if the proposal gets accepted and are already signed up and rearing to go?
 -->
 <ul>
-<li>Kristina Riemer, author/maintainer, Director of Communications and Cybertechnologies Data Science team at University of Arizona</li>
-<li>Eric Scott, contributor, Scientific Programmer and Educator for Communications and Cybertechnologies Data Science team at University of Arizona</li>
+<li>Kristina Riemer, author/maintainer, Director of Communications &amp; Cyber Technologies Data Science team at University of Arizona</li>
+<li>Eric Scott, contributor, Scientific Programmer and Educator for Communications &amp; Cyber Technologies Data Science team at University of Arizona</li>
 </ul>
 </section>
 <section id="contributors" class="level2">
@@ -2649,7 +2649,7 @@ Who are the people responsible for actually delivering the project if the propos
 Who are the people who have actively helped with this proposal but won't necessarily be on the core project team later?
 -->
 <ul>
-<li>Assistant Professor Laura Meredith developed the original idea for the <code>volcalc</code> package along with Kristina Riemer and is supportive of continued development by our team.</li>
+<li>Assistant Professor Laura Meredith developed the original idea for the <code>volcalc</code> R package along with Kristina Riemer and is supportive of continued development by our team.</li>
 <li>PhD student S. Marshall Ledford has been the main user of early versions of <code>volcalc</code> and will continue to provide feedback on the package API and documentation.</li>
 </ul>
 </section>
@@ -2658,7 +2658,7 @@ Who are the people who have actively helped with this proposal but won't necessa
 <!-- 
 Who has been given the opportunity to provide feedback on the proposal? This should include any R Consortium & ISC members who the proposal has been discussed with.
 -->
-<p>Tamás Stirling, maintainer of the <code>webchem</code> package (part of rOpenSci), was consulted and confirmed that <code>volcalc</code> is not replicating the efforts of any similar R packages that we are aware of.</p>
+<p>Tamás Stirling, maintainer of the <code>webchem</code> R package (part of rOpenSci), was consulted and confirmed that <code>volcalc</code> is not replicating the efforts of any similar R packages that we are aware of.</p>
 </section>
 </section>
 <section id="the-problem" class="level1">
@@ -2673,8 +2673,9 @@ It is important to cover:
  - [ ] Have there been previous attempts to resolve the problem
  - [ ] Why it should be tackled
 -->
-<p>Volatile organic compounds are important components of many biological and chemical processes, yet estimates of compound volatility are not available for most compounds. Volatile organic compounds are chemicals that readily evaporate under ambient conditions, and are important in a number of fields and contexts including plant defense against herbivores, as routes of microbial communication, and as important indoor pollutants, to name a few. Yet measures of volatility are time consuming to calculate experimentally and not available for the vast majority of chemical compounds in chemical information databases. However, methods exist for predicting measures of volatility from chemical structure <span class="citation" data-cites="pankowSIMPOLSimpleGroup2008">(<a href="#ref-pankowSIMPOLSimpleGroup2008" role="doc-biblioref">Pankow and Asher 2008</a>)</span> that can be used to estimate compound volatility.</p>
-<p>The <code>volcalc</code> package aims to automate the following steps for a given compound to estimate its volatility: 1) downloading data on chemical structure, 2) parsing those data to discover chemical functional groups, 3) applying the SIMPOL algorithm to predict volatility from functional groups and molecular weight, and assign compounds a volatility category given a reference environment The current draft version of <code>volcalc</code> does all this, but is limited to working with compounds present in the Kyoto Encyclopedia of Genes and Genomes (KEGG) database. This proposal focuses on expanding the scope of <code>volcalc</code> and preparing it for a larger and more diverse user base so anyone interested in volatile organic compounds can integrate it into their workflow.</p>
+<p>Volatile organic compounds are important components of many biological and chemical processes, yet estimates of compound volatility are not available for most compounds. VOCs readily evaporate under ambient conditions and are important in a number of fields and contexts including plant defense, microbial communication, and indoor air pollution, to name a few. Yet measures of volatility are time consuming to calculate experimentally and not available for the vast majority of compounds in chemical information databases.</p>
+<p>The <code>volcalc</code> R package automates the process of estimating volatility of compounds from their chemical structure <span class="citation" data-cites="pankowSIMPOLSimpleGroup2008">(<a href="#ref-pankowSIMPOLSimpleGroup2008" role="doc-biblioref">Pankow and Asher 2008</a>)</span>. Our package automates these following steps: 1) downloading data on chemical structure, 2) parsing those data to discover chemical functional groups, 3) applying the SIMPOL algorithm to predict volatility from functional groups and molecular weight, and assigning compounds a volatility category given a reference environment. This enables fast and easy estimation of volatility for thousands of chemical compounds.</p>
+<p><code>volcalc</code> is currently limited to working with compounds present in a single database. We propose expanding its use to include any chemical with structural information—something widely available in many chemical information databases. In addition, we will improve testing and documentation to make the package more reliable.</p>
 <p>There are currently no other user-friendly, automated tools for predicting compound volatility.</p>
 </section>
 <section id="the-proposal" class="level1">
@@ -2687,7 +2688,7 @@ This is where the proposal should be outlined.
 <!--
 At a high-level address what your proposal is and how it will address the problem identified. Highlight any benefits to the R Community that follow from solving the problem. This should be your most compelling section.
 -->
-<p>Using the support from this proposal, we will take our existing tool for calculating volatility of compounds and expand its usage to makes predictions for essentially any compound, and enable researchers in a wide variety of fields to be able to use it with ease. The current version of <code>volcalc</code> can estimate volatility only for compounds in one chemical database, called KEGG. However, by refactoring existing code, we can make the volatility prediction functionality available to essentially any compound that has a known structure. Additionally, we plan to improve package infrastructure and documentation (i.e. tests, CI, vignettes, etc.), build the package on r-universe, and submit the package to CRAN in order to simplify installation.</p>
+<p>Using the support from this proposal, we will take our existing tool for calculating volatility of compounds and expand its usage to makes predictions for essentially any compound, and enable researchers in a wide variety of fields to be able to use it with ease. The current version of <code>volcalc</code> can estimate volatility only for compounds in one chemical database, the Kyoto Encyclopedia of Genes and Genomes (KEGG). However, by refactoring existing code, we can make the volatility prediction functionality available to essentially any compound that has a known structure. Additionally, we plan to improve package infrastructure and documentation (i.e. tests, CI, vignettes, etc.), build the package on r-universe, and submit the package to CRAN in order to improve discoverability and simplify installation.</p>
 </section>
 <section id="detail" class="level2">
 <h2 class="anchored" data-anchor-id="detail">Detail</h2>
@@ -2700,18 +2701,12 @@ Depending on project type the detail section should include:
  - [ ] Architecture
  - [ ] Assumptions
 -->
-<p>The current version of <code>volcalc</code> was created in 2022 as part of a <a href="https://datascience.cct.arizona.edu/cct-data-science-incubator">data science incubator</a> project in collaboration between Dr. Kristina Riemer and Dr. Laura Meredith at University of Arizona. <code>volcalc</code> is the first project, to our knowledge, to implement the SIMPOL method for predicting chemical vapor pressures and enthalpies of vaporization <span class="citation" data-cites="pankowSIMPOLSimpleGroup2008">(<a href="#ref-pankowSIMPOLSimpleGroup2008" role="doc-biblioref">Pankow and Asher 2008</a>)</span> in an R package. This current version of the <code>volcalc</code> package has been successfully used to calculate volatility estimates for <em>all</em> 16,000+ compounds in the Kyoto Encyclopedia of Genes and Genomes (KEGG) database (in prep ms ref). validated using hand-collected data <span class="citation" data-cites="meredith2022 honeker2021">(<a href="#ref-meredith2022" role="doc-biblioref">Meredith and Tfaily 2022</a>; <a href="#ref-honeker2021" role="doc-biblioref">Honeker et al. 2021</a>)</span></p>
-<p>Because <code>volcalc</code> is currently limited to only working with chemical compounds from KEGG, we will refactor it to take molfiles as inputs directly. The main function in <code>volcalc</code>, <code>calc_vol()</code>, currently downloads chemical information as molfiles from the KEGG API as a starting point. It reads in that .mol file and parses it to find functional groups. It finally applies an algorithm (published in <span class="citation" data-cites="pankowSIMPOLSimpleGroup2008">Pankow and Asher (<a href="#ref-pankowSIMPOLSimpleGroup2008" role="doc-biblioref">2008</a>)</span>) to predict vapor pressure, and outputs to the user a relative measure of volatility.</p>
-<p>Molfile is an open format and various tools exist to translate other standard representations of chemical structure such as SMILES <span class="citation" data-cites="weininger1988smiles">(<a href="#ref-weininger1988smiles" role="doc-biblioref">Weininger 1988</a>)</span> and InChI <span class="citation" data-cites="heller2013">(<a href="#ref-heller2013" role="doc-biblioref">Heller et al. 2013</a>)</span> to molfiles (e.g. using the <a href="http://openbabel.org/wiki/Main_Page"><code>OpenBabel</code></a> command line utility or in R with <a href="https://github.com/girke-lab/ChemmineOB"><code>ChemmineOB</code></a>). Since <code>ChemmineOB</code> is already a dependency of <code>volcalc</code>, we can additionally extend <code>volcalc</code> to allow other representations of chemical structures as inputs. Since SMILES and InChl are both string representations, this will ideally make <code>volcalc</code> fit more easily into a <code>data.frame</code>-based workflow.</p>
+<p>The current version of <code>volcalc</code> was created in 2022 as part of a <a href="https://datascience.cct.arizona.edu/cct-data-science-incubator">data science incubator</a> project in collaboration between Dr. Kristina Riemer and Dr. Laura Meredith at University of Arizona. <code>volcalc</code> is the first project, to our knowledge, to implement the SIMPOL method for predicting chemical vapor pressures and enthalpies of vaporization <span class="citation" data-cites="pankowSIMPOLSimpleGroup2008">(<a href="#ref-pankowSIMPOLSimpleGroup2008" role="doc-biblioref">Pankow and Asher 2008</a>)</span> in an R package. volcalc` has been successfully used to calculate volatility estimates for <em>all</em> 16,000+ compounds in the KEGG database <span class="citation" data-cites="meredith">(<a href="#ref-meredith" role="doc-biblioref">L. K. Meredith et al. \emph{in prep}</a>)</span>. To ensure accuracy of the package, the volatility estimates for a subset of the compounds were validated using hand-collected data <span class="citation" data-cites="meredith2022 honeker2021">(<a href="#ref-meredith2022" role="doc-biblioref">Laura K. Meredith and Tfaily 2022</a>; <a href="#ref-honeker2021" role="doc-biblioref">Honeker et al. 2021</a>)</span>.</p>
+<p>The <strong>first minimum viable product</strong> is a function that can calculate volatility when provided a path to a molfile and a package vignette demonstrating how to couple this with chemical data sources such as the <code>webchem</code> package. The main function in <code>volcalc</code>, <code>calc_vol()</code>, currently downloads chemical information as molfiles from the KEGG API as a starting point. It reads in that molfile and parses it to find functional groups. It finally applies an algorithm (published in <span class="citation" data-cites="pankowSIMPOLSimpleGroup2008">Pankow and Asher (<a href="#ref-pankowSIMPOLSimpleGroup2008" role="doc-biblioref">2008</a>)</span>) to predict vapor pressure, and outputs to the user a relative measure of volatility.</p>
+<p>Molfile is an open file format, and various tools exist to translate other standard representations of chemical structure such as SMILES <span class="citation" data-cites="weininger1988smiles">(<a href="#ref-weininger1988smiles" role="doc-biblioref">Weininger 1988</a>)</span> and InChI <span class="citation" data-cites="heller2013">(<a href="#ref-heller2013" role="doc-biblioref">Heller et al. 2013</a>)</span> to molfiles. This translation can be done using <a href="https://github.com/girke-lab/ChemmineOB"><code>ChemmineOB</code></a> which is already a dependency of <code>volcalc</code>. SMILES and InChl are both string representations, so adding these as possible inputs will make <code>volcalc</code> fit more easily into a <code>data.frame</code>-based workflow.</p>
+<p>The <strong>second minimum viable product</strong> is a package that has gone through the steps suggested by <code>usethis::use_release_issue()</code> and is ready to submit to CRAN.</p>
 <p>Refactoring the code in <code>volcalc</code> to work with essentially any chemical and preparing the package for wider distribution will make this powerful tool accessible to researchers across a variety of domains.</p>
 <p><code>volcalc</code> is developed on GitHub and distributed under an MIT license. Project repository: <a href="https://github.com/Meredith-Lab/volcalc" class="uri">https://github.com/Meredith-Lab/volcalc</a></p>
-<section id="project-goals" class="level3">
-<h3 class="anchored" data-anchor-id="project-goals">Project Goals</h3>
-<p>Our goals for the proposed project fall into two main categories: 1) to make <code>volcalc</code> useful for applications beyond estimating relative volatility for compounds in the KEGG database, and 2) polishing the package in preparation for an initial submission to CRAN.</p>
-<p>For the first goal, we will focus on decoupling the data access and volatility estimation functionality of existing code in the <code>volcalc</code> package. This code is already written and the main work here is in API design and re-factoring. The <strong>first minimum viable product</strong> is a function that can calculate volatility when provided a path to a .mol file and a package vignette demonstrating how to couple this with chemical data sources such as the <code>webchem</code> package.</p>
-<p>The second goal will involve improving test coverage (although current coverage is high at 96.88% as reported by <code>covr::package_coverage()</code>), establishing continuous integration with GitHub actions, improving documentation, and satisfying R CMD check. The <strong>second minimum viable product</strong> is a package that has gone through the steps suggested by <code>usethis::use_release_issue()</code> and is ready to submit to CRAN.</p>
-<p>A reach goal is to allow users to input other representations of chemical structure besides molfiles. The <code>ChemmineOB</code> package can translate a variety of representations of chemical structure to molfiles and is already an indirect dependency of <code>volcalc</code> through its dependency on <code>ChemmineR</code>. Adding an argument to our <code>volcalc</code> function to specify the input format, and passing it to <code>ChemmineOB</code>’s translation function would be a way to expand the usability of <code>volcalc</code> even further.</p>
-</section>
 </section>
 </section>
 <section id="project-plan" class="level1">
@@ -2738,7 +2733,7 @@ Covering the planning phase, this section should provide a relatively detailed p
 <ul>
 <li>Implement CI with GitHub actions</li>
 <li>Check code coverage with <code>codecov</code> package</li>
-<li>Use GitHub Issues or Discussions to brainstorm eventual API (i.e. function names, argument names, how many exported functions, etc.)</li>
+<li>Use GitHub Issues or Discussions to brainstorm eventual API (e.g., function names, argument names, how many exported functions, etc.)</li>
 </ul>
 <p>Estimated work: 20 hours</p>
 </section>
@@ -2754,27 +2749,28 @@ Including target dates is really important as you need to be committed and the I
 <h4 class="anchored" data-anchor-id="milestone-2-october-1-2023">Milestone 2: October 1, 2023</h4>
 <ul>
 <li>Re-factor <code>calc_vol()</code> code to split KEGG download and SIMPOL calculation functionality</li>
+<li>Implement user inputs for environment (soil, water) and volatility categories</li>
 <li>Deprecate arguments and functions appropriately as necessary</li>
 <li>Update documentation to reflect new function usage</li>
 </ul>
-<p>Estimated work: 60 hours</p>
+<p>Estimated work: 70 hours</p>
 </section>
 <section id="milestone-3-february-1-2024" class="level4">
 <h4 class="anchored" data-anchor-id="milestone-3-february-1-2024">Milestone 3: February 1, 2024</h4>
 <ul>
-<li>Create a vignette demonstrating both KEGG usage and more general usage (i.e. providing a path to a .mol file) for volatility estimation</li>
+<li>Create a vignette demonstrating both KEGG usage and more general usage (i.e., providing a path to a molfile) for volatility estimation</li>
 <li>Improve package documentation by adding citations, details, and additional examples where appropriate</li>
 <li>Create a <code>pkgdown</code> website for <code>volcalc</code></li>
 <li>Create a CITATION.cff file, make a GitHub release, and archive code on Zenodo</li>
 <li>Go through checklist generated by <code>usethis::use_release_issue()</code> in preparation for CRAN submission</li>
 </ul>
-<p>Estimated work: 60 hours</p>
+<p>Estimated work: 70 hours</p>
 </section>
 <section id="milestone-4-may-1-2024" class="level4">
 <h4 class="anchored" data-anchor-id="milestone-4-may-1-2024">Milestone 4: May 1, 2024</h4>
 <ul>
 <li>Add functionality to supply other chemical representations besides molfiles as input</li>
-<li>Add to vignette(s) examples of integrating <code>volcalc</code> with data sources such as the <code>webchem</code> package to estimate volatility for an arbitrary set of compounds (i.e. not from KEGG)</li>
+<li>Add to vignette(s) examples of integrating <code>volcalc</code> with data sources such as the <code>webchem</code> package to estimate volatility for an arbitrary set of compounds (i.e., not from KEGG)</li>
 </ul>
 <p>Estimated work: 80 hours</p>
 </section>
@@ -2814,7 +2810,7 @@ An idea of what is required to make the project actually happen
 <!--
 Who needs to be involved, what's the proposed structure, what will it take to get their involvement?
 -->
-<p>Kristina Riemer and Eric Scott will do the coding work for this project. Eric and Kristina both have experience creating R packages, writing tests, and collaborating using GitHub. Eric has experience submitting packages to CRAN and with automation using GitHub actions.</p>
+<p>Kristina Riemer and Eric Scott will do the coding work for this project. Eric and Kristina both have experience creating R packages, writing tests, and collaborating using GitHub. Eric has experience submitting packages to CRAN and with automation using GitHub Actions.</p>
 <p>Eric and our collaborators Laura Meredith and S. Marshall Ledford have domain experience working with volatile organic compounds and chemoinformatics more generally. S. Marshall Ledford is currently the sole user of <code>volcalc</code> besides the developers, and is interested in giving feedback on future versions.</p>
 <!-- ## Processes -->
 <!-- 
@@ -2835,7 +2831,6 @@ Are there tools or tech that don't exist that will be produced to facilitate the
 [TO DO] THE GUIDANCE IS PRETTY UNCLEAR, ESP IN LIGHT OF GABOR'S PROPOSAL VS AWARD SIZE
 
 -->
-<p><strong>Attach simplified version of sponsored projects budget</strong></p>
 <p>We would like to request funding for the salaries of personnel working on this project.</p>
 <ul>
 <li>Kristina Riemer: 100 hours, $4,791</li>
@@ -2844,8 +2839,8 @@ Are there tools or tech that don't exist that will be produced to facilitate the
 <p>For a total of $12,265</p>
 <p>Funding timeline:</p>
 <ul>
-<li>After milestone 2 (September 1, 2023), $6,000</li>
-<li>After technical delivery (January 31, 2024), $6,000</li>
+<li>After milestone 2 (October 1, 2023), $6,133</li>
+<li>After technical delivery (May 31, 2024), $6,132</li>
 </ul>
 </section>
 <section id="summary" class="level2">
@@ -2877,13 +2872,13 @@ How will we know when success is achieved, what markers can we use along the way
 <ul>
 <li>Can the package be installed from GitHub? (yes/no)</li>
 <li>Can the package be installed from r-universe? (yes/no)</li>
-<li>Test coverage (at least 90%)</li>
-<li>Correctness tests for volatiltiy predictions including comparisons with measured values (± some tolerance) (yes/no)</li>
-<li>Is the package passing R CMD check on linux, macOS, and windows using CI? (yes/no)</li>
+<li>Is there sufficient test coverage? (at least 90%)</li>
+<li>Are there correctness tests for volatility predictions including comparisons with measured values (± some tolerance) (yes/no)</li>
+<li>Is the package passing <code>R CMD check</code> on Linux, macOS, and Windows using CI? (yes/no)</li>
 <li>Has the package been tested by users other than the developers? (yes/no)</li>
 <li>Does the package have a vignette that is easy to follow? (yes/no)</li>
 <li>Is code archived on Zenodo and a DOI associated with the package citation? (yes/no)</li>
-<li>The number of chemical representation types that can be used as input (molfile for success; inchikey, inchi, SMILES, and possibly more for reach goal)</li>
+<li>Can chemical representation types be used as input? (molfile for success; InChI, SMILES, and possibly more for reach goal)</li>
 </ul>
 </section>
 <section id="future-work" class="level2">
@@ -2891,7 +2886,10 @@ How will we know when success is achieved, what markers can we use along the way
 <!-- 
 How could this be extended / developed in the future by yourself and/or the community in general?
 -->
-<p><strong>TODO: replace with text from future directions in manuscript in prep</strong></p>
+<ul>
+<li>The contribution of some functional groups to volatility were not able to be measured using existing methods. As these analytical methods improve, the algorithm in <code>volcalc</code> can be updated.</li>
+<li><code>volcalc</code> only calculates relative volatility under standard conditions; functionality to specify environmental conditions could be added.</li>
+</ul>
 </section>
 <section id="key-risks" class="level2">
 <h2 class="anchored" data-anchor-id="key-risks">Key risks</h2>
@@ -2906,7 +2904,8 @@ What sort of things could come up that can delay or break the project?
 -->
 <ul>
 <li>The SIMPOL algorithm might not be applicable to <em>all</em> compounds, since it was designed to work with volatile organic compounds. In that case, we may need to add a warning to the user that values returned by <code>volcalc</code> may not make sense for certain compounds based on molecular weight, for example. We will explore edge cases with our collaborators and develop a plan to guide users to correct and accurate interpretation of data returned by <code>volcalc</code> functions.</li>
-<li><code>volcalc</code> has <code>OpenBabel</code> as a system dependency (indirectly), which could potentially lead to delays in getting the package to build using GitHub actions. In the event that this is an issue, we will reach out to the rOpenSci community on Slack for help with this.</li>
+<li><code>volcalc</code> has <code>OpenBabel</code> as a system dependency (indirectly), which could potentially lead to delays in getting the package to build using GitHub Actions. In the event that this is an issue, we will reach out to the rOpenSci community on Slack for help with this.</li>
+<li>We plan to improve and submit this package to CRAN to increase the possible userbase and its ease of use. This process can be challenging due to technical hurdles, and it is possible that this package will not ultimately be accepted. We will reach out to other R users to get their assistance to ensure the package ends up on CRAN.</li>
 </ul>
 <div class="refs">
 
@@ -2921,6 +2920,9 @@ Heller, Stephen, Alan McNaught, Stephen Stein, Dmitrii Tchekhovskoi, and Igor Pl
 </div>
 <div id="ref-honeker2021" class="csl-entry" role="doc-biblioentry">
 Honeker, Linnea K., Kelsey R. Graves, Malak M. Tfaily, Jordan E. Krechmer, and Laura K. Meredith. 2021. <span>“The Volatilome: A Vital Piece of the Complete Soil Metabolome.”</span> <em>Frontiers in Environmental Science</em> 9 (April). <a href="https://doi.org/10.3389/fenvs.2021.649905">https://doi.org/10.3389/fenvs.2021.649905</a>.
+</div>
+<div id="ref-meredith" class="csl-entry" role="doc-biblioentry">
+Meredith, L. K., K. Riemer, P. Geffre, L. Honeker, J. Krechmer, K. Graves, M. Tfaily, and S. K. Ledford. \emph{in prep}. <span>“Automating Methods for Estimating Metabolite Volatility,”</span> \emph{in prep}.
 </div>
 <div id="ref-meredith2022" class="csl-entry" role="doc-biblioentry">
 Meredith, Laura K., and Malak M. Tfaily. 2022. <span>“Capturing the Microbial Volatilome: An Oft Overlooked ’Ome’.”</span> <em>Trends in Microbiology</em> 30 (7): 622–31. <a href="https://doi.org/10.1016/j.tim.2021.12.004">https://doi.org/10.1016/j.tim.2021.12.004</a>.
