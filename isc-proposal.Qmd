@@ -26,7 +26,10 @@ affiliations:
 date: today
 date-format: iso
 format:
-  hikmah-pdf: default
+  hikmah-pdf:
+    geometry: 
+      - left=1in
+      - right=1in
   html:
     embed-resources: true
 bibliography: references.bib
