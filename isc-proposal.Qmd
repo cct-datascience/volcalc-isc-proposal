@@ -19,17 +19,14 @@ author:
       
 affiliations:
   - id: cct
-    name: "Communications & Cybertechnologies, University of Arizona"
+    name: "Communications & Cyber Technologies, University of Arizona"
   - id: snre
     name: "School of Natural Resources and the Environment, University of Arizona"
     
 date: today
 date-format: iso
 format:
-  hikmah-pdf:
-    geometry: 
-      - left=1in
-      - right=1in
+  hikmah-pdf: default
   html:
     embed-resources: true
 bibliography: references.bib
