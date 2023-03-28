@@ -33,7 +33,6 @@ How could this be extended / developed in the future by yourself and/or the comm
 
 - The contribution of some functional groups to volatility were not able to be measured using existing methods. As these analytical methods improve, the algorithm in `volcalc` can be updated.
 - `volcalc` only calculates relative volatility under standard conditions; functionality to specify environmental conditions could be added.
-- As this package is used increasingly by researchers, they will discover other edge cases or unusual compounds that the package can be improved to accomodate
 
 ## Key risks
 <!-- 
