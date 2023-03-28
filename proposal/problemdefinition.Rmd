@@ -13,7 +13,7 @@ It is important to cover:
 
 
 Volatile organic compounds are important components of many biological and chemical processes, yet estimates of compound volatility are not available for most compounds. 
-These compounds are chemicals that readily evaporate under ambient conditions, and are important in a number of fields and contexts including plant defense against herbivores, as routes of microbial communication, and as important indoor pollutants, to name a few.
+VOCs readily evaporate under ambient conditions and are important in a number of fields and contexts including plant defense, microbial communication, and indoor air pollution, to name a few.
 Yet measures of volatility are time consuming to calculate experimentally, and volatility estimates are not available for the vast majority of chemical compounds in chemical information databases. 
 
 The `volcalc` R package automates the process of estimating volatility of compounds. 
