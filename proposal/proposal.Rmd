@@ -30,8 +30,6 @@ The current version of `volcalc` was created in 2022 as part of a [data science 
 volcalc` has been successfully used to calculate volatility estimates for *all* 16,000+ compounds in the KEGG database [@meredith]. 
 To ensure accuracy of the package, the volatility estimates for a subset of the compounds were validated using hand-collected data [@meredith2022; @honeker2021]. 
 
-Because `volcalc` is currently limited to only working with chemical compounds from KEGG, we will refactor it to take chemical compound structure files as inputs directly.
-The type of structure file the packagee uses is called a molfile. 
 The main function in `volcalc`, `calc_vol()`, currently downloads chemical information as molfiles from the KEGG API as a starting point.
 It reads in that molfile and parses it to find functional groups.
 It finally applies an algorithm (published in @pankowSIMPOLSimpleGroup2008) to predict vapor pressure, and outputs to the user a relative measure of volatility.
