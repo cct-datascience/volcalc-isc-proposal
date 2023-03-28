@@ -8,7 +8,7 @@ An idea of what is required to make the project actually happen
 Who needs to be involved, what's the proposed structure, what will it take to get their involvement?
 -->
 
-Kristina Riemer and Eric Scott will do the coding work for this project.  Eric and Kristina both have experience creating R packages, writing tests, and collaborating using GitHub.  Eric has experience submitting packages to CRAN and with automation using GitHub actions.  
+Kristina Riemer and Eric Scott will do the coding work for this project.  Eric and Kristina both have experience creating R packages, writing tests, and collaborating using GitHub.  Eric has experience submitting packages to CRAN and with automation using GitHub Actions.  
 
 Eric and our collaborators Laura Meredith and S. Marshall Ledford have domain experience working with volatile organic compounds and chemoinformatics more generally. S. Marshall Ledford is currently the sole user of `volcalc` besides the developers, and is interested in giving feedback on future versions.
 
@@ -33,8 +33,6 @@ Are there tools or tech that don't exist that will be produced to facilitate the
 
 -->
 
-**Attach simplified version of sponsored projects budget** 
-
 We would like to request funding for the salaries of personnel working on this project.
 
 - Kristina Riemer: 100 hours, $4,791
@@ -44,8 +42,8 @@ For a total of $12,265
 
 Funding timeline:
 
-- After milestone 2 (September 1, 2023), $6,000
-- After technical delivery (January 31, 2024), $6,000
+- After milestone 2 (October 1, 2023), $6,133
+- After technical delivery (May 31, 2024), $6,132
 
 ## Summary
 <!--
