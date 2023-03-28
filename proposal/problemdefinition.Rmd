@@ -12,16 +12,16 @@ It is important to cover:
 -->
 
 
-Volatile organic compounds are important components of many biological and chemical processes, yet estimates of compound volatility are not available for most compounds. 
+Volatile organic compounds (VOCs) are important components of many biological and chemical processes, yet estimates of compound volatility are not available for most compounds. 
 VOCs readily evaporate under ambient conditions and are important in a number of fields and contexts including plant defense, microbial communication, and indoor air pollution, to name a few.
 Yet measures of volatility are time consuming to calculate experimentally and not available for the vast majority of compounds in chemical information databases. 
 
-The `volcalc` R package automates the process of estimating volatility of compounds from their chemical structure [@pankowSIMPOLSimpleGroup2008].
-Our package automates these following steps: 1) downloading data on chemical structure, 2) parsing those data to discover chemical functional groups, 3) applying the SIMPOL algorithm to predict volatility from functional groups and molecular weight, and assigning compounds a volatility category given a reference environment. 
+The `volcalc` R package automates the process of estimating volatility of compounds from their chemical structure.
+Our package automates these following steps: 1) downloading data on chemical structure, 2) parsing those data to discover chemical functional groups, 3) applying the SIMPOL algorithm [@pankowSIMPOLSimpleGroup2008] to predict volatility from functional groups and molecular weight, and assigning compounds a volatility category given a reference environment. 
 This enables fast and easy estimation of volatility for thousands of chemical compounds. 
 
 `volcalc` is currently limited to working with compounds present in a single database. 
-We propose expanding its use to include any chemical with structural information—something widely available in many chemical information databases. 
+We propose expanding its use to include any chemical with structural information—data which is widely available in many chemical information databases. 
 In addition, we will improve testing and documentation to make the package more reliable.
 
 There are currently no other user-friendly, automated tools for predicting compound volatility. 

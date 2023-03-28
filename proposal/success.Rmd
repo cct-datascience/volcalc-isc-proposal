@@ -32,7 +32,7 @@ How could this be extended / developed in the future by yourself and/or the comm
 -->
 
 - The contribution of some functional groups to volatility were not able to be measured using existing methods. As these analytical methods improve, the algorithm in `volcalc` can be updated.
-- `volcalc` only calculates relative volatility under standard conditions; functionality to specify environmental conditions could be added.
+- `volcalc` only calculates relative volatility under standard conditions; functionality to specify custom environmental conditions could be added.
 
 ## Key risks
 <!-- 

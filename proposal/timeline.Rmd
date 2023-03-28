@@ -76,8 +76,8 @@ Dissemination plan: <!-- This section is done! -->
 - After the initial re-factor (milestone 2 above), we plan to share the package with `webchem` contributors via our rOpenSci Slack channel for feedback & suggestions.  We will encourage them to share the project with their networks of collaborators as well.
 - Near the project conclusion we will:
   - prepare a blog post for https://datascience.cct.arizona.edu/
-  - prepare a Twitter announcement to share from [@cct_datascience](https://twitter.com/cct_datascience)
-  - prepare a short demonstration video to be published to our [YouTube channel](https://www.youtube.com/@cctdatascience2556) that can be shared on the README of our repository and through social media
+  - prepare a Twitter announcement to share from [\@cct_datascience](https://twitter.com/cct_datascience)
+  - prepare a short demonstration video to be published to our [YouTube channel](https://www.youtube.com/@cctdatascience2556) that can be shared on the package README and through social media
   - work with our collaborator Laura Meredith to identify potential domain-specific venues to promote the use of `volcalc` such as scholarly societies, email lists, and social media accounts
 
 Estimated work: 20 hours
