@@ -19,7 +19,6 @@ Covering the planning phase, this section should provide a relatively detailed p
 
 - Implement CI with GitHub actions
 - Check code coverage with `codecov` package
-- Implement user inputs for environment (soil, water) and volatility categories
 - Use GitHub Issues or Discussions to brainstorm eventual API (e.g., function names, argument names, how many exported functions, etc.)
 
 Estimated work: 20 hours
@@ -35,6 +34,7 @@ Including target dates is really important as you need to be committed and the I
 #### Milestone 2: October 1, 2023
 
 - Re-factor `calc_vol()` code to split KEGG download and SIMPOL calculation functionality
+- Implement user inputs for environment (soil, water) and volatility categories
 - Deprecate arguments and functions appropriately as necessary
 - Update documentation to reflect new function usage
 
