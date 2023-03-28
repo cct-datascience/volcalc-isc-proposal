@@ -20,9 +20,7 @@ The `volcalc` R package automates the process of estimating volatility of compou
 Our package automates these following steps: 1) downloading data on chemical structure, 2) parsing those data to discover chemical functional groups, 3) applying the SIMPOL algorithm to predict volatility from functional groups and molecular weight, and assigning compounds a volatility category given a reference environment. 
 This enables fast and easy estimation of volatility for thousands of chemical compounds. 
 
-While `volcalc` does this successfully, there are some limitations to its use that we would like to expand. 
-As the package currently is limited to working with compounds present in a single database and one type of file for describing compound structure, we would like to expand its use to additional compounds in more databases and more file types. 
-The package will also be more usable and reliable for researchers interested in volatility with an expansion of testing and documentation. 
+`volcalc` is currently limited to working with compounds present in a single database. We propose expanding its use to include any chemical with structural information—something widely available in many chemical information databases. In addition, we will improve testing and documentation to make the package more reliable.
 This proposal focuses on expanding the scope of `volcalc` and preparing it for a larger and more diverse user base so anyone interested in volatile organic compounds can integrate it into their workflow.
 
 There are currently no other user-friendly, automated tools for predicting compound volatility. 
