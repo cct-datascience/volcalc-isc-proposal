@@ -17,7 +17,7 @@ VOCs readily evaporate under ambient conditions and are important in a number of
 Yet measures of volatility are time consuming to calculate experimentally and not available for the vast majority of compounds in chemical information databases. 
 
 The `volcalc` R package automates the process of estimating volatility of compounds from their chemical structure [@pankowSIMPOLSimpleGroup2008].
-Our package automates these following steps: 1) downloading data on chemical structure, 2) parsing those data to discover chemical functional groups, 3) applying the SIMPOL algorithm to predict volatility from functional groups and molecular weight, and assign compounds a volatility category given a reference environment. 
+Our package automates these following steps: 1) downloading data on chemical structure, 2) parsing those data to discover chemical functional groups, 3) applying the SIMPOL algorithm to predict volatility from functional groups and molecular weight, and assigning compounds a volatility category given a reference environment. 
 This enables fast and easy estimation of volatility for thousands of chemical compounds. 
 
 While `volcalc` does this successfully, there are some limitations to its use that we would like to expand. 
