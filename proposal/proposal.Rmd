@@ -35,9 +35,7 @@ It reads in that molfile and parses it to find functional groups.
 It finally applies an algorithm (published in @pankowSIMPOLSimpleGroup2008) to predict vapor pressure, and outputs to the user a relative measure of volatility.
 
 Molfile is an open file format, and various tools exist to translate other standard representations of chemical structure such as SMILES [@weininger1988smiles] and InChI [@heller2013] to molfiles. 
-This translation can be done using the [`OpenBabel`](http://openbabel.org/wiki/Main_Page) command line utility or in R with [`ChemmineOB`](https://github.com/girke-lab/ChemmineOB).
-Since `ChemmineOB` is already a dependency of `volcalc`, we can additionally extend `volcalc` to allow other representations of chemical structures as inputs.
-Since SMILES and InChl are both string representations, this will ideally make `volcalc` fit more easily into a `data.frame`-based workflow.
+This translation can be done using  [`ChemmineOB`](https://github.com/girke-lab/ChemmineOB) which is already a dependency of `volcalc`. SMILES and InChl are both string representations, so adding these as possible inputs will make `volcalc` fit more easily into a `data.frame`-based workflow.
 
 Refactoring the code in `volcalc` to work with essentially any chemical and preparing the package for wider distribution will make this powerful tool accessible to researchers across a variety of domains.
 
