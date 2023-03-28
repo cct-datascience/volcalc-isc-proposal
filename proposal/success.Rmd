@@ -31,7 +31,7 @@ The following can be used to measure success:
 How could this be extended / developed in the future by yourself and/or the community in general?
 -->
 
-- As a handful of functional groups relevant to volatility were not able to be measured using existing methods, the community who creates these methods could expand to these groups
+- The contribution of some functional groups to volatility were not able to be measured using existing methods. As these analytical methods improve, the algorithm in `volcalc` can be updated.
 - The algorithm used in the package only calculates relative volatility under standard conditions; the algorithm could be added to or expanded to calculate volatility itself and for additional environmental conditions
 - As additional chemical compound databases are used as inputs to `volcalc`, these should be documented and either added to this package or created as standalone packages that link to `volcalc`
 - As this package is used increasingly by researchers, they will discover other edge cases or unusual compounds that the package can be improved to accomodate
