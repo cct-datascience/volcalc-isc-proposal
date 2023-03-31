@@ -17,7 +17,7 @@ Who are the people responsible for actually delivering the project if the propos
 Who are the people who have actively helped with this proposal but won't necessarily be on the core project team later?
 -->
 
-- Assistant Professor Laura Meredith developed the original idea for the `volcalc` R package along with Kristina Riemer and is supportive of continued development by our team.
+- Assistant Professor Laura Meredith developed the original idea for the `volcalc` R package along with Kristina Riemer and supports continued development by our team.
 - PhD student S. Marshall Ledford has been the main user of early versions of `volcalc` and will continue to provide feedback on the package API and documentation.
 
 
@@ -26,4 +26,4 @@ Who are the people who have actively helped with this proposal but won't necessa
 Who has been given the opportunity to provide feedback on the proposal? This should include any R Consortium & ISC members who the proposal has been discussed with.
 -->
 
-Tamás Stirling, maintainer of the `webchem` R package (part of rOpenSci), was consulted and confirmed that `volcalc` is not replicating the efforts of any similar R packages that we are aware of. 
+Tamás Stirling, maintainer of the `webchem` R package (part of rOpenSci), was consulted and confirmed that `volcalc` does not replicate efforts of any similar R packages that we are aware of. 

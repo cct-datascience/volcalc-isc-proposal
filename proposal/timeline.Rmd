@@ -19,7 +19,7 @@ Covering the planning phase, this section should provide a relatively detailed p
 
 - Implement CI with GitHub actions
 - Check code coverage with `codecov` package
-- Use GitHub Issues or Discussions to brainstorm eventual API (e.g., function names, argument names, how many exported functions, etc.)
+- Use GitHub Issues or Discussions to brainstorm eventual API (e.g., function names, argument names, how many exported functions)
 
 Estimated work: 20 hours
 
@@ -78,6 +78,6 @@ Dissemination plan: <!-- This section is done! -->
   - prepare a blog post for https://datascience.cct.arizona.edu/
   - prepare a Twitter announcement to share from [\@cct_datascience](https://twitter.com/cct_datascience)
   - prepare a short demonstration video to be published to our [YouTube channel](https://www.youtube.com/@cctdatascience2556) that can be shared on the package README and through social media
-  - work with our collaborator Laura Meredith to identify potential domain-specific venues to promote the use of `volcalc` such as scholarly societies, email lists, and social media accounts
+  - work with our collaborator Laura Meredith to identify potential domain-specific venues to promote the use of `volcalc` including virtual training workshops, international scientific conferences, email lists, lab website, and social media accounts
 
 Estimated work: 20 hours
