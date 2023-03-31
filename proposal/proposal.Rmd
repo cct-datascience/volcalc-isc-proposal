@@ -9,10 +9,10 @@ At a high-level address what your proposal is and how it will address the proble
 -->
 
 
-Using the support from this proposal, we will take our existing tool for calculating volatility of compounds and expand its usage to make predictions for essentially any compound, and enable researchers in a wide variety of fields to be able to use it with ease. 
+Using the support from this proposal, we will take our existing tool for calculating volatility of compounds and expand its usage to make predictions for essentially any compound, and enable researchers in a wide variety of fields to use it with ease. 
 The current version of `volcalc` can estimate volatility only for compounds in the Kyoto Encyclopedia of Genes and Genomes (KEGG) database.
-However, by refactoring existing code, we can make the volatility prediction functionality available to essentially any compound that has a known structure.
-Additionally, we plan to improve package infrastructure and documentation (i.e. tests, CI, vignettes, etc.), build the package on r-universe, and submit the package to CRAN in order to improve discoverability and simplify installation.
+However, by refactoring existing code, we can make the volatility prediction functionality available to any compound with a known structure.
+Additionally, we plan to improve package infrastructure and documentation (e.g. increased test coverage, continuous integration, vignettes), build the package on r-universe, and submit the package to CRAN to improve discoverability and simplify installation.
 
 ## Detail
 <!--
@@ -28,8 +28,8 @@ Depending on project type the detail section should include:
 The current version of `volcalc` was created in 2022 as part of a [data science incubator](https://datascience.cct.arizona.edu/cct-data-science-incubator) project in collaboration between Dr. Kristina Riemer and Dr. Laura Meredith at University of Arizona. 
 `volcalc` is developed on GitHub and distributed under an MIT license.
 `volcalc` is the first project, to our knowledge, to implement the SIMPOL method for predicting chemical vapor pressures and enthalpies of vaporization [@pankowSIMPOLSimpleGroup2008] in an R package.
-volcalc` has been successfully used to calculate volatility estimates for *all* 16,000+ compounds in the KEGG database [@meredith]. 
-To ensure accuracy of the package, the volatility estimates for a subset of the compounds were validated using hand-collected data [@meredith2022; @honeker2021]. 
+`volcalc` has been successfully used to calculate volatility estimates for *all* 19,000+ compounds in the KEGG database with available masses [@meredith]. 
+To ensure accuracy of the package, the volatility estimates for a subset of the compounds were validated against hand-collected data [@meredith2022; @honeker2021]. 
 
 The **first minimum viable product** is a function that can calculate volatility when provided a path to a molfile and a package vignette demonstrating how to couple this with chemical data sources such as the `webchem` package.
 The main function in `volcalc`, `calc_vol()`, currently works by downloading a molfile from the KEGG API given a KEGG-specific chemical identifier as a starting point.

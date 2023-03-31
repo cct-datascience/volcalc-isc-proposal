@@ -19,7 +19,7 @@ The following can be used to measure success:
 - Can the package be installed from GitHub? (yes/no)
 - Can the package be installed from r-universe? (yes/no)
 - Is there sufficient test coverage? (at least 90%)
-- Are there correctness tests for volatility predictions including comparisons with measured values (± some tolerance) (yes/no)
+- Are there correctness tests for volatility predictions? (yes/no)
 - Is the package passing `R CMD check` on Linux, macOS, and Windows using CI? (yes/no)
 - Has the package been tested by users other than the developers? (yes/no)
 - Does the package have a vignette that is easy to follow? (yes/no)

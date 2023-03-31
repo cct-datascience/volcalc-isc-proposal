@@ -10,7 +10,7 @@ Who needs to be involved, what's the proposed structure, what will it take to ge
 
 Kristina Riemer and Eric Scott will do the coding work for this project.  Eric and Kristina both have experience creating R packages, writing tests, and collaborating using GitHub.  Eric has experience submitting packages to CRAN and with automation using GitHub Actions.  
 
-Eric and our collaborators Laura Meredith and S. Marshall Ledford have domain experience working with VOC data and chemoinformatics more generally. S. Marshall Ledford is currently the main user of `volcalc` besides the developers, and is interested in giving feedback on future versions.
+Eric and collaborators Laura Meredith and S. Marshall Ledford have domain experience working with VOC data and chemoinformatics more generally. S. Marshall Ledford is currently the main user of `volcalc` besides the developers, and will give feedback on future versions.
 
 <!-- ## Processes -->
 <!-- 
@@ -33,7 +33,7 @@ Are there tools or tech that don't exist that will be produced to facilitate the
 
 -->
 
-We would like to request funding for the salaries of personnel working on this project.
+We request funding for the salaries of personnel working on this project.
 
 - Kristina Riemer: 100 hours, $4,791
 - Eric Scott: 160 hours, $7,475
