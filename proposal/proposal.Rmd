@@ -10,7 +10,7 @@ At a high-level address what your proposal is and how it will address the proble
 
 
 Using the support from this proposal, we will take our existing tool for calculating volatility of compounds and expand its usage to make predictions for essentially any compound, and enable researchers in a wide variety of fields to use it with ease. 
-The current version of `volcalc` can estimate volatility only for compounds in the Kyoto Encyclopedia of Genes and Genomes (KEGG) database.
+The current version of `volcalc` can estimate volatility only for compounds in the Kyoto Encyclopedia of Genes and Genomes (KEGG) database [@kanehisa2000].
 However, by refactoring existing code, we can make the volatility prediction functionality available to any compound with a known structure.
 Additionally, we plan to improve package infrastructure and documentation (e.g. increased test coverage, continuous integration, vignettes), build the package on r-universe, and submit the package to CRAN to improve discoverability and simplify installation.
 
