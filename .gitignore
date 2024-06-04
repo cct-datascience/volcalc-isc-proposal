@@ -9,4 +9,4 @@
 *.html
 *.pdf
 *.docx
-!reports/report_volcalc_milestone2.pdf
+!report_volcalc_milestone2.pdf
