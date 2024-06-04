@@ -10,3 +10,4 @@
 *.pdf
 *.docx
 !report_volcalc_milestone2.pdf
+!final_report.pdf

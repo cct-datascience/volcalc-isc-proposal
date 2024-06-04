@@ -1,0 +1,84 @@
+---
+title: "R Consortium Report"
+subtitle: "volcalc: Calculate Volatility of Chemical Compounds"
+date: today
+author: 
+  - name: Kristina Riemer
+    orcid: 0000-0003-3802-3331
+    affiliations:
+      - ref: cct
+  - name: Eric R. Scott
+    orcid: 0000-0002-7430-7879
+    affiliations:
+      - ref: cct
+  - name: Laura Meredith
+    orcid: 0000-0003-4244-4366
+    affiliations:
+      - ref: snre
+  - name: S. Marshall Ledford
+    affiliations:
+      - ref: snre
+      
+affiliations:
+  - id: cct
+    name: "Communications & Cyber Technologies, University of Arizona"
+  - id: snre
+    name: "School of Natural Resources and the Environment, University of Arizona"
+format: 
+  hikmah-pdf: default
+  # typst: default
+  # pdf: default
+editor: visual
+bibliography: references.bib
+---
+
+## Summary
+
+This is the final report on the ISC-funded work on the `volcalc` package.
+The GitHub repository for the current version of `volcacl` can be found at: <https://github.com/Meredith-Lab/volcalc>.
+We have completed the proposed milestones 3 and 4 as well as a modified version of our proposed dissemination plan.
+
+## Milestone 3
+
+`volcalc` now includes two vignettes—one demonstrating downloading .mol files from KEGG, and another showing general usage for calculating estimated volatility.
+A `pkgdown` website including these vignettes is avilable here: <https://meredith-lab.github.io/volcalc/>.
+The code for `volcalc` has been archived on Zenodo [@riemer2023] and a methods paper has been published in *Frontiers in Microbiology* [@meredith2023].
+We've submitted `volcalc` to CRAN and it was rejected due to issues in the DESCRIPTION file of a Bioconductor dependency, an issue that is unfortunately out of our hands.
+As of today, this issue appears to have been fixed, but now checks on RHub are failing because of [issues with the `RCurl` package](https://cran.r-project.org/web/checks/check_results_RCurl.html).
+When these problems in dependencies are fixed, we may attempt another CRAN submission.
+In the meantime, `volcalc` can be installed from GitHub or [r-universe](https://cct-datascience.r-universe.dev/volcalc).
+
+## Milestone 4
+
+We added functionality to supply chemical representations as SMILES strings in addition to paths to .mol files.
+We have not (yet) added a vignette about integrating `webchem` and `volcalc` because few `webchem` functions provide results with SMILES strings.
+`ChemmineOB` is able to translate from more commonly returned formats such as InChi, however that feature is not available on Windows.
+
+## Other improvements
+
+We also added some validation abilities to `volcalc` that are important due to the way `ChemmineOB` and `ChemmineR` interact with the command line program Open Babel.
+When parsing errors from Open Babel are encountered, these error messages are displayed on the R console, but cannot be captured (see discussion in issue [#56](https://github.com/Meredith-Lab/volcalc/issues/56)).
+The workaround we implemented was to include code to look for the "symptoms" of parsing errors—namely a missing value for `InChI` returned by `ChemmineR::propOB()`.
+Unfortunately, the `InChI` value is *always* missing on Windows, so our validation code doesn't work on Windows.
+We implemented this as a `validate` argument to `calc_vol()` and `get_fx_groups()` which defaults to `TRUE` and prints an warning when set to `TRUE` and run on Windows.
+
+## Dissemination
+
+In addition to the *Frontiers in Microbiology* publication, we have shared `volcalc` on social media (Mastodon), in blog posts, and in talks.
+Authors have also reached out personally to researchers who may be interested in these calculations.
+
+## Future opportunities
+
+Besides continuing to try to get `volcalc` on CRAN, we have a few open issues that we see as potential improvements to `volcalc` that could be part of future work.
+Because of various difficulties encountered with `ChemmineOB` and `ChemmineR`, we are considering dropping these Bioconductor dependencies and implementing interactions with Open Babel directly in `volcalc`.
+This would potentially lead to a more stable and self-contained package, however it would be a substantial amount of work.
+Similarly, we may consider dropping the `KEGGREST` dependency as it is only used for one function to access the KEGG API, and we've already created other functions in `volcalc` that access different KEGG API endpoints.
+
+In the original SIMPOL.1 method that we have implemented in `volcalc`, one could specify the temperature at which to make these calculations [@pankowSIMPOLSimpleGroup2008].
+In `volcalc`, users currently can only estimate volatility at a fixed temperature of 20ºC.
+Implementing a variable temperature would not be trivial, but would add a great deal of flexibility.
+
+## References
+
+::: refs
+:::
