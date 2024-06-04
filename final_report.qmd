@@ -44,7 +44,7 @@ We have completed the proposed milestones 3 and 4 as well as a modified version 
 A `pkgdown` website including these vignettes is avilable here: <https://meredith-lab.github.io/volcalc/>.
 The code for `volcalc` has been archived on Zenodo [@riemer2023] and a methods paper has been published in *Frontiers in Microbiology* [@meredith2023].
 We've submitted `volcalc` to CRAN and it was rejected due to issues in the DESCRIPTION file of a Bioconductor dependency, an issue that is unfortunately out of our hands.
-As of today, this issue appears to have been fixed, but now checks on RHub are failing because of [issues with the `RCurl` package](https://cran.r-project.org/web/checks/check_results_RCurl.html).
+As of today, this issue appears to have been fixed, but now checks on RHub are failing because of [issues with the `RCurl` package](https://cran.r-project.org/web/checks/check_results_RCurl.html) and GitHub actions are failing because of issues [building `ChemmineOB` on macOS](https://github.com/girke-lab/ChemmineOB/issues/35).
 When these problems in dependencies are fixed, we may attempt another CRAN submission.
 In the meantime, `volcalc` can be installed from GitHub or [r-universe](https://cct-datascience.r-universe.dev/volcalc).
 
